@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/psf/black
+    hooks:
+      - id: black          # auto-formats your code
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    hooks:
+      - id: ruff           # lints and catches bad patterns
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    hooks:
+      - id: mypy           # type checks
