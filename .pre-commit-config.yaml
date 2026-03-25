@@ -1,12 +1,20 @@
 repos:
   - repo: https://github.com/psf/black
+    rev: 26.3.1
     hooks:
       - id: black          # auto-formats your code
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.7
     hooks:
       - id: ruff           # lints and catches bad patterns
 
   - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.19.1
     hooks:
       - id: mypy           # type checks
+
+  - repo: https://github.com/pappasam/toml-sort
+    rev: v0.24.4
+    hooks:
+      - id: toml-sort-fix  # sorts pyproject.toml keys
