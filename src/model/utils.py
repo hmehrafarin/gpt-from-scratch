@@ -1,5 +1,6 @@
 import torch
 
+
 def get_device() -> torch.device:
     """
     Returns the best available device in priority order:
@@ -9,9 +10,8 @@ def get_device() -> torch.device:
     """
     if torch.cuda.is_available():
         return torch.device("cuda")
-    
+
     if torch.backends.mps.is_available():
         return torch.device("mps")
-    
-    return torch.device("cpu")
 
+    return torch.device("cpu")
