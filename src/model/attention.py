@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn
-from config import AttentionConfig
+from config import GPTConfig
 
 
 class CausalSelfAttention(nn.Module):
-    def __init__(self, cfg: AttentionConfig):
+    def __init__(self, cfg: GPTConfig):
         super().__init__()
         self.cfg = cfg
         # We're doing single linear projection for query, key and
