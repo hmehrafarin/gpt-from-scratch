@@ -1,12 +1,12 @@
 import torch
 import pytest
-from config import AttentionConfig
+from config import GPTConfig
 from model.attention import CausalSelfAttention
 
 
 @pytest.fixture
 def cfg():
-    return AttentionConfig(d_model=1024, n_heads=16, max_seq_len=128)
+    return GPTConfig(d_model=1024, n_heads=16, max_seq_len=128)
 
 
 def test_output_shape(cfg):
